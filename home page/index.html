@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="images/logo.svg">
+    <link href="https://exfont.com/fsp-demo-proxima-nova-regular.font" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <title>KashSend - Fast Money Transfer</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-block">
+                <img src="images/logo.svg" alt="KashSend Logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <img src="images/home.svg" alt="Home">
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/transaction.svg" alt="Transactions">
+                    <span>Transactions</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/recepients.svg" alt="Recipients">
+                    <span>Recipients</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="images/settings.svg" alt="Settings">
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Security Alert -->
+             <div class="user-block"><div class="user"></div></div>
+            <div class="security-alert">
+                Your security is essential to us. <a href="" class="verify-link">Verify your account now</a> to stay secure.
+            </div>
+
+            <!-- Main Transfer Form Section -->
+             <div class="transfer-section-block">
+            <section class="transfer-section">
+                <!-- Profile and Rate Header -->
+                <div class="form-header rate-info">
+                        <span class="rate">Rate:</span> <span>1 NGN = 0.0005 AED</span>
+                </div>
+
+                <form class="transfer-form" id="transferForm">
+                    <!-- Sending Amount Section -->
+                    <div class="form-section">
+                        <label class="section-label">You're sending</label>
+                        <div class="currency-input-group">
+                            <input 
+                                type="number" 
+                                placeholder="Enter amount" 
+                                class="amount-input"
+                                min="15000"
+                                max="10000000"
+                            >
+                            <div class="currency-selector">
+                                <img src="images/Nigerian flag.svg" alt="Nigeria" class="flag-icon">
+                                <span class="currency-code">NGN</span>
+                                <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amount Limits -->
+                    <div class="amount-limits">
+                        <div class="limit-row">
+                            <span class="limit-label">Min. amount</span>
+                            <span class="limit-value">NGN 15,000.00</span>
+                        </div>
+                        <div class="limit-row">
+                            <span class="limit-label">Max. amount</span>
+                            <span class="limit-value">NGN 10,000,000.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Fee Info -->
+                    <div class="fee-info">
+                        <div class="fee-row">
+                            <span class="fee-label">Fee</span>
+                            <span class="fee-amount">NGN 0.00</span>
+                        </div>
+                        <div class="fee-row">
+                            <span class="fee-label">Total you're paying</span>
+                            <span class="fee-amount">NGN 0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Recipient Amount Section -->
+                    <div class="form-section">
+                        <label class="section-label">Recipient gets</label>
+                        <div class="currency-input-group">
+                            <input 
+                                type="number" 
+                                placeholder="0.00" 
+                                class="amount-input"
+                                readonly
+                            >
+                            <div class="currency-selector">
+                                <img src="images/UAE Flag.svg" alt="UAE" class="flag-icon">
+                                <span class="currency-code">AED</span>
+                                <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Method -->
+                    <div class="form-section">
+                        <label class="section-label">Delivery method</label>
+                        <div class="delivery-input-group">
+                            <select class="delivery-select">
+                                <option value="">Select delivery method</option>
+                                <option value="bank">Send to bank account</option>
+                                <option value="wallet">Mobile Wallet</option>
+                                <option value="cash">Cash Pickup</option>
+                            </select>
+                            <svg class="dropdown-icon-select" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-send">Send money now</button>
+                </form>
+            </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

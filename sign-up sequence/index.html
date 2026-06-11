@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/kashsend logo.svg">
+    <link href="https://exfont.com/fsp-demo-proxima-nova-regular.font" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header"><img src="images/kashsend logo.svg" alt="logo"></div>
+        
+        <!-- Welcome Page -->
+        <div id="welcome-page" class="sign-up-block active-page">
+            <h3>Welcome to kashsend</h3>
+            <p>Send money to your loved ones in minutes.</p>
+            <button type="button" class="continue-google" onclick="handleGoogleLogin()">
+                <img src="images/Logo.svg" alt="google-logo">
+                <span>Continue with Google</span>
+            </button>
+            <div class="divider">Or</div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email address">
+            </div>
+            <button type="button" class="btn-continue" onclick="handleEmailContinue()">Continue</button>
+        </div>
+
+        <!-- Verification Page -->
+        <div id="verification-page" class="sign-up-block">
+            <button type="button" class="btn-back" onclick="handleBackClick()">← Go back</button>
+            <h3>Verify your email</h3>
+            <p>Please enter the 6 digit verification code sent to <span id="email-display"></span></p>
+            
+            <div class="otp-container" id="otp-container">
+                <input type="text" class="otp-input" maxlength="1" data-index="0">
+                <input type="text" class="otp-input" maxlength="1" data-index="1">
+                <input type="text" class="otp-input" maxlength="1" data-index="2">
+                <input type="text" class="otp-input" maxlength="1" data-index="3">
+                <input type="text" class="otp-input" maxlength="1" data-index="4">
+                <input type="text" class="otp-input" maxlength="1" data-index="5">
+            </div>
+
+            <div id="error-message" class="error-message hidden"></div>
+
+            <button type="button" class="btn-continue" onclick="handleVerifyCode()">Continue</button>
+            
+            <div class="resend-container">
+                <span>Didn't receive code? <button type="button" class="btn-resend" onclick="handleResend()">Resend</button></span>
+                <span id="resend-timer" class="timer hidden"></span>
+            </div>
+
+            <div class="info-box">
+                <p>Having trouble verifying the code? Kindly check your device for spam or blocked messages. For further issues, please contact us at <a href="mailto:help@kashsend.com">help@kashsend.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
